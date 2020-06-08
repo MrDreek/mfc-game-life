@@ -1,6 +1,5 @@
 #pragma once
 #include <vector>
-#include "LittleCell.h"
 
 enum class Status
 {
