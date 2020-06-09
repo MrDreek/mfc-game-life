@@ -12,6 +12,10 @@
 #define new DEBUG_NEW
 #endif
 #include "Config.h"
+#include "CRulesDialog.h"
+#include "CControlDialog.h"
+#include "CSteadyFigureDialog.h"
+#include "CActionFigureDialog.h"
 
 
 // Диалоговое окно CAboutDlg используется для описания сведений о приложении
@@ -75,6 +79,10 @@ BEGIN_MESSAGE_MAP(CKursachDlg, CDialogEx)
 	ON_COMMAND(ID_32772, &CKursachDlg::OnPauseRunBtnClick)
 	ON_WM_RBUTTONUP()
 	ON_COMMAND(ID_32773, &CKursachDlg::OnResetBtnClick)
+	ON_COMMAND(ID_RULES_MENU, &CKursachDlg::OnRulesMenu)
+	ON_COMMAND(ID_CONTROLS_MENU, &CKursachDlg::OnControlsMenu)
+	ON_COMMAND(ID_STEADY_FIGURE_MENU, &CKursachDlg::OnSteadyFigureMenu)
+	ON_COMMAND(ID_MOVING_FIGURE_MENU, &CKursachDlg::OnMovingFigureMenu)
 END_MESSAGE_MAP()
 
 
@@ -346,4 +354,44 @@ void CKursachDlg::OnResetBtnClick()
 
 	CKursachDlg::Invalidate();
 	CKursachDlg::UpdateWindow();
+}
+
+
+void CKursachDlg::OnRulesMenu()
+{
+	isTimerRun = true;
+	OnPauseRunBtnClick();
+
+	CRulesDialog dlg;
+	dlg.DoModal();
+}
+
+
+void CKursachDlg::OnControlsMenu()
+{
+	isTimerRun = true;
+	OnPauseRunBtnClick();
+
+	CControlDialog dlg;
+	dlg.DoModal();
+}
+
+
+void CKursachDlg::OnSteadyFigureMenu()
+{
+	isTimerRun = true;
+	OnPauseRunBtnClick();
+
+	CSteadyFigureDialog dlg;
+	dlg.DoModal();
+}
+
+
+void CKursachDlg::OnMovingFigureMenu()
+{
+	isTimerRun = true;
+	OnPauseRunBtnClick();
+
+	CActionFigureDialog dlg;
+	dlg.DoModal();
 }

@@ -185,8 +185,12 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CActionFigureDialog.h" />
+    <ClInclude Include="CControlDialog.h" />
     <ClInclude Include="Cell.h" />
     <ClInclude Include="Config.h" />
+    <ClInclude Include="CRulesDialog.h" />
+    <ClInclude Include="CSteadyFigureDialog.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="kursach.h" />
     <ClInclude Include="kursachDlg.h" />
@@ -195,7 +199,11 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CActionFigureDialog.cpp" />
+    <ClCompile Include="CControlDialog.cpp" />
     <ClCompile Include="Cell.cpp" />
+    <ClCompile Include="CRulesDialog.cpp" />
+    <ClCompile Include="CSteadyFigureDialog.cpp" />
     <ClCompile Include="kursach.cpp" />
     <ClCompile Include="kursachDlg.cpp" />
     <ClCompile Include="pch.cpp">
@@ -212,9 +220,25 @@
     <None Include="res\kursach.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="res\action.png" />
+    <Image Include="res\action2.png" />
+    <Image Include="res\block.png" />
+    <Image Include="res\block2.png" />
+    <Image Include="res\box.png" />
+    <Image Include="res\box2.png" />
+    <Image Include="res\gosper.gif" />
+    <Image Include="res\gosper1.png" />
+    <Image Include="res\gosper2.png" />
+    <Image Include="res\hive.png" />
+    <Image Include="res\hive2.png" />
     <Image Include="res\icon.ico" />
     <Image Include="res\icon1.ico" />
     <Image Include="res\kursach.ico" />
+    <Image Include="res\laof2.png" />
+    <Image Include="res\loaf.png" />
+    <Image Include="res\loaf3.png" />
+    <Image Include="res\other.png" />
+    <Image Include="res\other2.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

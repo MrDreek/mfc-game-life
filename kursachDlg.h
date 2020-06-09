@@ -47,4 +47,8 @@ public:
 	bool isTimerRun = false;
 	afx_msg void OnRButtonUp(UINT nFlags, CPoint point);
 	afx_msg void OnResetBtnClick();
+	afx_msg void OnRulesMenu();
+	afx_msg void OnControlsMenu();
+	afx_msg void OnSteadyFigureMenu();
+	afx_msg void OnMovingFigureMenu();
 };

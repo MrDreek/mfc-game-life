@@ -39,6 +39,18 @@
     <ClInclude Include="Config.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="CRulesDialog.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="CControlDialog.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="CSteadyFigureDialog.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="CActionFigureDialog.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="kursach.cpp">
@@ -51,6 +63,18 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Cell.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="CRulesDialog.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="CControlDialog.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="CSteadyFigureDialog.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="CActionFigureDialog.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -72,6 +96,54 @@
       <Filter>Файлы ресурсов</Filter>
     </Image>
     <Image Include="res\icon.ico">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="res\block.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="res\block2.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="res\hive.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="res\hive2.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="res\laof2.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="res\loaf.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="res\loaf3.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="res\box.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="res\box2.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="res\other.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="res\other2.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="res\action.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="res\action2.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="res\gosper1.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="res\gosper2.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="res\gosper.gif">
       <Filter>Файлы ресурсов</Filter>
     </Image>
   </ItemGroup>
