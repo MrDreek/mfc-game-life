@@ -72,6 +72,9 @@ BEGIN_MESSAGE_MAP(CKursachDlg, CDialogEx)
 	ON_WM_NCLBUTTONUP()
 	ON_WM_LBUTTONUP()
 	ON_WM_ERASEBKGND()
+	ON_COMMAND(ID_32772, &CKursachDlg::OnPauseRunBtnClick)
+	ON_WM_RBUTTONUP()
+	ON_COMMAND(ID_32773, &CKursachDlg::OnResetBtnClick)
 END_MESSAGE_MAP()
 
 
@@ -121,10 +124,15 @@ BOOL CKursachDlg::OnInitDialog()
 			MB_OK + MB_ICONERROR);
 	}
 
+	isTimerRun = true;
+	SetWindowText(L"Игра \"Жизнь\" - Запущена");
+
 	return TRUE;  // возврат значения TRUE, если фокус не передан элементу управления
 }
 
-void CKursachDlg::initCells() {
+void CKursachDlg::resetCells() {
+	cells.clear();
+
 	for (int i = 0; i < Config::WIDTH; i++) {
 		std::vector<Cell> row;
 
@@ -137,11 +145,9 @@ void CKursachDlg::initCells() {
 		cells.push_back(row);
 	}
 
-	std::vector<std::vector<Cell>> test;
-
 	for (int i = 0; i < Config::WIDTH; i++) {
 		for (int j = 0; j < Config::HIGHT; j++) {
-			for (int sx = -1; sx <= 1; sx++ ) {
+			for (int sx = -1; sx <= 1; sx++) {
 				for (int sy = -1; sy <= 1; sy++) {
 					if (!(sx == 0 && sy == 0)) {
 						cells[i][j].nearCells.push_back(&cells[(i + sx + Config::WIDTH) % Config::WIDTH][(j + sy + Config::HIGHT) % Config::HIGHT]);
@@ -150,7 +156,10 @@ void CKursachDlg::initCells() {
 			}
 		}
 	}
+}
 
+void CKursachDlg::initCells() {
+	resetCells();
 
 	for (int i = 10; i < 17; i++) {
 		cells[i][10].status = Status::LIVE;
@@ -258,6 +267,10 @@ void CKursachDlg::OnTimer(UINT_PTR nIDEvent)
 	CKursachDlg::Invalidate();
 	CKursachDlg::UpdateWindow();
 
+	if (!isTimerRun) {
+		KillTimer(1);
+	}
+
 	CDialogEx::OnTimer(nIDEvent);
 }
 
@@ -277,6 +290,9 @@ void CKursachDlg::OnLButtonUp(UINT nFlags, CPoint point)
 
 	cells[x][y].turn();
 
+	CKursachDlg::Invalidate();
+	CKursachDlg::UpdateWindow();
+
 	CDialogEx::OnLButtonUp(nFlags, point);
 }
 
@@ -284,4 +300,50 @@ void CKursachDlg::OnLButtonUp(UINT nFlags, CPoint point)
 BOOL CKursachDlg::OnEraseBkgnd(CDC* pDC)
 {
 	return true;
+}
+
+
+void CKursachDlg::OnPauseRunBtnClick()
+{
+	if (isTimerRun) {
+		isTimerRun = false;
+		SetWindowText(L"Игра \"Жизнь\" - Пауза");
+	}
+	else {
+		isTimerRun = true;
+		SetWindowText(L"Игра \"Жизнь\" - Запущена");
+		int iInstallResult;
+		iInstallResult = SetTimer(1, 250, NULL);
+		if (iInstallResult == FALSE)
+		{
+			MessageBox(L"Cannot install timer",
+				L"Error message",
+				MB_OK + MB_ICONERROR);
+		}
+	}
+}
+
+
+void CKursachDlg::OnRButtonUp(UINT nFlags, CPoint point)
+{
+	auto x = floor(point.x / Config::SIZE);
+	auto y = floor(point.y / Config::SIZE);
+
+	cells[x][y].flip();
+
+	CKursachDlg::Invalidate();
+	CKursachDlg::UpdateWindow();
+
+	CDialogEx::OnRButtonUp(nFlags, point);
+}
+
+
+void CKursachDlg::OnResetBtnClick()
+{
+	resetCells();
+	isTimerRun = false;
+	SetWindowText(L"Игра \"Жизнь\" - Пауза");
+
+	CKursachDlg::Invalidate();
+	CKursachDlg::UpdateWindow();
 }

@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "Cell.h"
-#include "Config.h"
+
 
 void Cell::step1() {
 	int arround = this->countNearLivedCell();
@@ -52,4 +52,8 @@ void Cell::turn() {
 	for (int i = 0; i < size; i++) {
 		nearCells[i]->status = nearCells[i]->isLivedCell() ? Status::NONE : Status::LIVE;
 	}
+}
+
+void Cell::flip() {
+	this->status = this->isLivedCell() ? Status::NONE : Status::LIVE;
 }

@@ -28,6 +28,7 @@ protected:
 
 	// Созданные функции схемы сообщений
 	virtual BOOL OnInitDialog();
+	void resetCells();
 	void initCells();
 	afx_msg void OnSysCommand(UINT nID, LPARAM lParam);
 	afx_msg void OnPaint();
@@ -41,4 +42,9 @@ public:
 	bool flop = false;
 	afx_msg void OnLButtonUp(UINT nFlags, CPoint point);
 	afx_msg BOOL OnEraseBkgnd(CDC* pDC);
+	afx_msg void OnPauseRunBtnClick();
+
+	bool isTimerRun = false;
+	afx_msg void OnRButtonUp(UINT nFlags, CPoint point);
+	afx_msg void OnResetBtnClick();
 };

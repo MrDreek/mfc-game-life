@@ -1,4 +1,5 @@
 #pragma once
+#include "Config.h"
 #include <vector>
 
 enum class Status
@@ -34,4 +35,5 @@ public:
 	bool isLivedCell();
 	int countNearLivedCell();
 	void turn();
+	void flip();
 };
