@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CAboutDlg" Collapsed="true">
+    <Position X="4" Y="0.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="CAboutDlg::__unnamed_enum_03e7_1" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>kursachDlg.cpp</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>kursachDlg.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CActionFigureDialog" Collapsed="true">
+    <Position X="5.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAICEAAAAAAAQAABAAQABAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CActionFigureDialog.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CControlDialog" Collapsed="true">
+    <Position X="7.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAgAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>CControlDialog.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cell">
+    <Position X="3.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAIAAAAAAIEAQJAAQEAAAAAAAAAAABggAAAAAA=</HashCode>
+      <FileName>Cell.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CKursachApp" Collapsed="true">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAEAAAA=</HashCode>
+      <FileName>kursach.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CKursachDlg" Collapsed="true">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACBADEAAAEAAAAADZAAAEBCCAAACAQACAAgAAARAAA=</HashCode>
+      <FileName>kursachDlg.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Config">
+    <Position X="0.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAgAAAAAQAAAAAAAAABAgAQAAAAAEAAAAAAAAgA=</HashCode>
+      <FileName>Config.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CRulesDialog" Collapsed="true">
+    <Position X="5.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAIQAAAAAAAAAA=</HashCode>
+      <FileName>CRulesDialog.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSteadyFigureDialog" Collapsed="true">
+    <Position X="7.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAEAAAAAAAAOABAABAAAAAwAAAAAABAIAAARAgA=</HashCode>
+      <FileName>CSteadyFigureDialog.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Status" Collapsed="true">
+    <Position X="1.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAoAAAoAAIAABADMAAAABEAAIAAgAAAIEBEAAEAgQ=</HashCode>
+      <FileName>C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\gdiplustypes.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
